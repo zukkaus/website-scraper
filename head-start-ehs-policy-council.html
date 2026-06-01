@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Head Start and Early Head Start Policy Council — WVCAC parent and community governance body."/>
+  <title>Head Start / EHS Policy Council — Washita Valley CAC</title>
+  <style>
+    :root{--navy:#1a4f8a;--navy-d:#133a66;--gold:#f59e0b;--bg:#f4f6fa;--white:#ffffff;--text:#1a1a2e;--muted:#4a5568;--border:#d1d9e6;--radius:10px;--shadow:0 4px 20px rgba(0,0,0,.10);--nav-h:68px;}
+    /* Logo bar */
+    .logo-bar{background:var(--white);border-bottom:3px solid var(--gold);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:center;}
+    .logo-bar img{height:95px;width:auto;display:block;}
+    @media(max-width:600px){.logo-bar img{height:68px;}}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px;}
+    .skip-link{position:absolute;top:-100%;left:1rem;background:var(--navy);color:#fff;padding:.5rem 1.1rem;border-radius:0 0 8px 8px;font-weight:700;font-size:1rem;z-index:9999;transition:top .2s;}
+    .skip-link:focus{top:0;}
+    /* Navbar */
+    .navbar{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);height:var(--nav-h);display:flex;align-items:center;}
+    .nav-inner{width:100%;max-width:1200px;margin-inline:auto;padding-inline:1.5rem;display:flex;align-items:center;gap:1rem;}
+    .nav-menu{list-style:none;display:flex;align-items:center;gap:.1rem;margin-inline:auto;}
+    .nav-item{position:relative;}
+    .nav-link{display:flex;align-items:center;gap:.3rem;color:rgba(255,255,255,.92);padding:.55rem .85rem;border-radius:6px;font-size:1rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;transition:background .2s,color .2s;cursor:pointer;background:none;border:none;font-family:inherit;}
+    .nav-link:hover,.nav-link:focus-visible,.nav-item:hover>.nav-link{background:rgba(255,255,255,.15);color:#fff;}
+    .nav-link.active{background:rgba(255,255,255,.22);color:#fff;}
+    .nav-link svg{flex-shrink:0;transition:transform .2s;}
+    .nav-item:hover>.nav-link svg{transform:rotate(180deg);}
+    .dropdown{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:220px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);list-style:none;overflow:hidden;z-index:200;}
+    .nav-item:hover .dropdown,.nav-item:focus-within .dropdown{display:block;}
+    .dropdown a{display:block;padding:.65rem 1.1rem;font-size:1rem;font-weight:500;color:var(--text);transition:background .15s;}
+    .dropdown a:hover,.dropdown a:focus-visible{background:#e8f0fb;color:var(--navy);}
+    .dropdown-divider{height:1px;background:var(--border);}
+    .hamburger{display:none;margin-left:auto;background:none;border:2px solid rgba(255,255,255,.6);border-radius:6px;color:#fff;padding:.4rem .55rem;cursor:pointer;font-size:1.3rem;line-height:1;}
+    @media(max-width:899px){
+      .nav-menu{display:none;flex-direction:column;align-items:stretch;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--navy-d);padding:1rem 0;gap:0;box-shadow:0 6px 20px rgba(0,0,0,.3);}
+      .nav-menu.open{display:flex;}
+      .nav-link{border-radius:0;font-size:1rem;padding:.75rem 1.5rem;}
+      .dropdown{position:static;box-shadow:none;border:none;border-radius:0;background:rgba(0,0,0,.2);}
+      .dropdown a{color:rgba(255,255,255,.85);padding-left:2.5rem;}
+      .dropdown a:hover{background:rgba(255,255,255,.1);color:#fff;}
+      .nav-item:hover .dropdown{display:none;}
+      .nav-item.open .dropdown{display:block;}
+      .hamburger{display:flex;align-items:center;}
+    }
+    /* Page hero banner */
+    .page-hero{background:linear-gradient(135deg,var(--navy) 0%,#2563a8 100%);color:#fff;padding:3.5rem 1.5rem 3rem;text-align:center;}
+    .page-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:.5rem;}
+    .page-hero p{font-size:1.05rem;color:rgba(255,255,255,.9);max-width:620px;margin-inline:auto;}
+    /* Main content */
+    .page-body{max-width:1100px;margin-inline:auto;padding:3rem 1.5rem 4rem;}
+    .content-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 2.25rem;box-shadow:var(--shadow);margin-bottom:2rem;}
+    .content-card h2{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:3px solid var(--gold);}
+    .content-card h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin:1.25rem 0 .5rem;}
+    .content-card p{font-size:1rem;color:var(--muted);margin-bottom:.75rem;line-height:1.7;}
+    .content-card ul{padding-left:1.4rem;color:var(--muted);font-size:1rem;display:flex;flex-direction:column;gap:.4rem;margin-bottom:.75rem;}
+    .content-card li{line-height:1.6;}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:1rem;}
+    .info-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;}
+    .info-box h3{font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin-bottom:.5rem;}
+    .info-box p{font-size:1rem;color:var(--muted);line-height:1.6;}
+    .img-block{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:1.5rem;}
+    .img-block img{width:100%;height:auto;display:block;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+    @media(max-width:700px){.two-col{grid-template-columns:1fr;}}
+    .alert{background:#e8f0fb;border-left:4px solid var(--navy);border-radius:0 var(--radius) var(--radius) 0;padding:1rem 1.25rem;font-size:1rem;color:var(--text);margin-bottom:1.5rem;}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;border-radius:8px;font-size:1rem;font-weight:700;transition:.2s;cursor:pointer;border:none;font-family:inherit;}
+    .btn-primary{background:var(--navy);color:#fff;}
+    .btn-primary:hover{background:var(--navy-d);}
+    /* Footer */
+    footer{background:#111827;color:#d1d5db;padding:2.5rem 1.5rem 1.5rem;}
+    .footer-inner{max-width:1200px;margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;}
+    .footer-col h3{color:#fff;font-size:1rem;font-weight:700;margin-bottom:.75rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .footer-col ul a{font-size:1rem;color:#d1d5db;transition:color .15s;}
+    .footer-col ul a:hover{color:#fff;text-decoration:underline;}
+    .footer-fb-link{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;color:#d1d5db;min-height:44px;padding:.25rem 0;transition:color .15s;}
+    .footer-fb-link:hover{color:#fff;text-decoration:underline;}
+    .footer-fb-link svg{flex-shrink:0;width:28px;height:28px;}
+    .footer-bottom{max-width:1200px;margin-inline:auto;border-top:1px solid #374151;padding-top:1.25rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;align-items:center;font-size:1rem;color:#9ca3af;}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <div class="logo-bar" role="banner" aria-label="Washita Valley CAC">
+    <a href="index.html" aria-label="Go to home page">
+      <img
+        src="https://static.wixstatic.com/media/bf0d32_f4373b43f45c4ef384f3b734eeb4f77a~mv2.jpg/v1/fill/w_880,h_170,al_c,q_90,enc_avif,quality_auto/WVCAC%202.jpg"
+        alt="Washita Valley Community Action Council — Helping People, Changing Lives"
+        width="440" height="85"
+      />
+    </a>
+  </div>
+  
+  <header role="banner">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <button class="hamburger" id="hamburger" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">&#9776;</button>
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="index.html">HOME</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="annual-reports.html">ANNUAL REPORTS</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <button class="nav-link " aria-haspopup="true" aria-expanded="false" aria-controls="dd-head-start">
+              HEAD START
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="dropdown" id="dd-head-start" role="list"><li><a href="head-start.html">HEAD START Overview</a></li><li class="dropdown-divider" role="separator"></li><li><a href="head-start-centers.html">Head Start Centers</a></li><li><a href="head-start-ehs-policy-council.html">EHS Policy Council</a></li><li><a href="enrollment-application.html">Enrollment Application</a></li></ul>
+          </li>
+          <li class="nav-item" role="listitem">
+            <button class="nav-link " aria-haspopup="true" aria-expanded="false" aria-controls="dd-services">
+              SERVICES
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="dropdown" id="dd-services" role="list"><li><a href="services.html">SERVICES Overview</a></li><li class="dropdown-divider" role="separator"></li><li><a href="transit.html">Transit</a></li><li><a href="weatherization.html">Weatherization</a></li><li><a href="housing.html">Housing</a></li></ul>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="board-of-directors.html">BOARD</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="agency-forms.html">AGENCY FORMS</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="job-openings.html">CAREERS</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="staff.html">STAFF</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="about-us.html">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="page-hero" aria-label="Page header">
+    <h1>Head Start / EHS Policy Council</h1>
+    <p>Parent and community voice in the Head Start program.</p>
+  </section>
+  <main id="main" class="page-body">
+    
+    <div class="two-col" style="align-items:start;">
+      <div>
+        <div class="content-card">
+          <h2>About the Policy Council</h2>
+          <p>The Head Start / Early Head Start Policy Council is a governance body made up of parents and community representatives. It plays a vital role in the planning, operation, and oversight of WVCAC Head Start programs.</p>
+          <p>Policy Council members have a say in decisions about program design, staff hiring, and budgeting — ensuring the program serves families the way families need it to.</p>
+        </div>
+        <div class="content-card">
+          <h2>Get Involved</h2>
+          <p>If you are a parent or guardian of a Head Start child and would like to get involved with the Policy Council, contact your center director or reach us at:</p>
+          <div class="info-grid">
+            <div class="info-box"><h3>Phone</h3><p>(405) 224-5831</p></div>
+            <div class="info-box"><h3>Email</h3><p><a href="mailto:info@washitavalleycac.com" style="color:var(--navy);">info@washitavalleycac.com</a></p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CALENDAR COLUMN -->
+      <div>
+        <div class="content-card">
+          <h2>Meeting Calendar</h2>
+          <p style="margin-bottom:1rem;font-size:1rem;color:var(--muted);">
+            Upcoming Policy Council meetings — updated automatically from our internal schedule.
+          </p>
+
+          <!-- ── HOW TO UPDATE (staff only — remove this box once live) ──
+               1. Open your Google Sheet.
+               2. File → Share → Publish to web → Sheet1 → CSV → Publish.
+               3. Copy the URL and paste it into SHEET_CSV_URL below in the <script>.
+               Sheet columns must be: Date | Time | Title | Description
+               Date format: MM/DD/YYYY   e.g. 07/15/2025
+          ── -->
+
+          <div id="calendar-loading" style="text-align:center;padding:2rem;color:var(--muted);font-size:1rem;">
+            Loading meetings&hellip;
+          </div>
+          <div id="calendar-error" style="display:none;" class="alert">
+            Calendar could not be loaded. Please contact the office for upcoming meeting dates.
+          </div>
+          <ul id="calendar-list" style="list-style:none;display:flex;flex-direction:column;gap:.75rem;"></ul>
+          <p id="calendar-empty" style="display:none;color:var(--muted);font-size:1rem;">No upcoming meetings scheduled.</p>
+        </div>
+
+        <!-- ADMIN SETUP CARD — visible to staff, explains how to connect the sheet -->
+        <div class="content-card" style="border:2px dashed var(--gold);background:#fffbeb;">
+          <h2 style="color:#92400e;">&#9998; Staff Setup — Connect Your Google Sheet</h2>
+          <ol style="padding-left:1.25rem;color:var(--muted);font-size:1rem;line-height:1.9;margin-bottom:1rem;">
+            <li>Open your Google Sheet with meeting dates.</li>
+            <li>Make sure columns are in this exact order:<br>
+              <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;font-size:1rem;">Date &nbsp;|&nbsp; Time &nbsp;|&nbsp; Title &nbsp;|&nbsp; Description</code><br>
+              Date format: <strong>MM/DD/YYYY</strong> &nbsp; e.g. <em>07/15/2025</em>
+            </li>
+            <li>In Google Sheets: <strong>File → Share → Publish to web</strong></li>
+            <li>Choose <strong>Sheet1</strong> and format <strong>CSV</strong>, then click <strong>Publish</strong>.</li>
+            <li>Copy the URL Google gives you.</li>
+            <li>Open <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;font-size:1rem;">build_pages.py</code> and find this line:<br>
+              <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;font-size:1rem;">const SHEET_CSV_URL = ...</code><br>
+              Replace the placeholder with your URL, then run <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;font-size:1rem;">python3 build_pages.py</code>.
+            </li>
+          </ol>
+          <p style="font-size:1rem;color:#92400e;"><strong>After setup:</strong> Just edit the Google Sheet — the calendar updates automatically. No code needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    // ── PASTE YOUR PUBLISHED GOOGLE SHEET CSV URL BELOW ──────────────────
+    const SHEET_CSV_URL = "";
+    // ─────────────────────────────────────────────────────────────────────
+
+    (function () {
+      const list    = document.getElementById("calendar-list");
+      const loading = document.getElementById("calendar-loading");
+      const error   = document.getElementById("calendar-error");
+      const empty   = document.getElementById("calendar-empty");
+
+      if (!SHEET_CSV_URL) {
+        loading.style.display = "none";
+        error.style.display   = "block";
+        error.textContent     = "Calendar not yet connected. See staff setup instructions below.";
+        return;
+      }
+
+      fetch(SHEET_CSV_URL)
+        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+        .then(csv => {
+          loading.style.display = "none";
+          const rows = csv.trim().split("\n").slice(1) // skip header row
+            .map(row => row.split(",").map(c => c.replace(/^"|"$/g, "").trim()))
+            .filter(r => r[0])
+            .map(r => ({ date: new Date(r[0]), time: r[1] || "", title: r[2] || "", desc: r[3] || "" }))
+            .filter(r => !isNaN(r.date) && r.date >= new Date(new Date().toDateString())) // upcoming only
+            .sort((a, b) => a.date - b.date);
+
+          if (!rows.length) { empty.style.display = "block"; return; }
+
+          const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+          const days   = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+          rows.forEach(ev => {
+            const li = document.createElement("li");
+            li.style.cssText = "display:flex;gap:1rem;align-items:flex-start;padding:.9rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:8px;";
+            li.innerHTML = \`
+              <div style="min-width:52px;text-align:center;background:var(--navy);color:#fff;border-radius:8px;padding:.4rem .5rem;flex-shrink:0;">
+                <div style="font-size:.875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.8;">\${months[ev.date.getMonth()].slice(0,3)}</div>
+                <div style="font-size:1.5rem;font-weight:900;line-height:1;">\${ev.date.getDate()}</div>
+                <div style="font-size:.875rem;color:rgba(255,255,255,.82);">\${days[ev.date.getDay()]}</div>
+              </div>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">\${ev.title}</div>
+                \${ev.time ? \`<div style="font-size:1rem;color:var(--muted);">&#128337; \${ev.time}</div>\` : ""}
+                \${ev.desc ? \`<div style="font-size:1rem;color:var(--muted);margin-top:.2rem;">\${ev.desc}</div>\` : ""}
+              </div>\`;
+            list.appendChild(li);
+          });
+        })
+        .catch(() => {
+          loading.style.display = "none";
+          error.style.display   = "block";
+        });
+    })();
+    </script>
+  </main>
+  
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>Programs</h3>
+        <ul>
+          <li><a href="head-start.html">Head Start</a></li>
+          <li><a href="transit.html">Transit</a></li>
+          <li><a href="weatherization.html">Weatherization</a></li>
+          <li><a href="housing.html">Housing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Organization</h3>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="board-of-directors.html">Board of Directors</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="job-openings.html">Job Openings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="agency-forms.html">Agency Forms</a></li>
+          <li><a href="annual-reports.html">Annual Reports</a></li>
+          <li><a href="mailto:info@washitavalleycac.com">Contact Us</a></li>
+          <li>
+            <a class="footer-fb-link" href="https://www.facebook.com/search/top?q=washita%20valley%20community%20action%20council" target="_blank" rel="noopener" aria-label="Visit Washita Valley CAC on Facebook (opens in new tab)">
+              <svg viewBox="0 0 24 24" fill="#1877f2" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Washita Valley Community Action Council. All rights reserved.</span>
+      <span>WCAG 2.1 AA Compliant</span>
+    </div>
+  </footer>
+  <script src="accessibility.js"></script>
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const navMenu=document.getElementById('nav-menu');
+    hamburger.addEventListener('click',()=>{const o=navMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',o);});
+    document.querySelectorAll('.nav-link[aria-haspopup]').forEach(btn=>{
+      btn.addEventListener('click',()=>{if(window.innerWidth<900){const li=btn.closest('.nav-item');li.classList.toggle('open');btn.setAttribute('aria-expanded',li.classList.contains('open'));}});
+    });
+</script>
+</body>
+</html>

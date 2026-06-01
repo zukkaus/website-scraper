@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Meet the staff of Washita Valley Community Action Council."/>
+  <title>Staff — Washita Valley CAC</title>
+  <style>
+    :root{--navy:#1a4f8a;--navy-d:#133a66;--gold:#f59e0b;--bg:#f4f6fa;--white:#ffffff;--text:#1a1a2e;--muted:#4a5568;--border:#d1d9e6;--radius:10px;--shadow:0 4px 20px rgba(0,0,0,.10);--nav-h:68px;}
+    /* Logo bar */
+    .logo-bar{background:var(--white);border-bottom:3px solid var(--gold);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:center;}
+    .logo-bar img{height:95px;width:auto;display:block;}
+    @media(max-width:600px){.logo-bar img{height:68px;}}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px;}
+    .skip-link{position:absolute;top:-100%;left:1rem;background:var(--navy);color:#fff;padding:.5rem 1.1rem;border-radius:0 0 8px 8px;font-weight:700;font-size:1rem;z-index:9999;transition:top .2s;}
+    .skip-link:focus{top:0;}
+    /* Navbar */
+    .navbar{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25);height:var(--nav-h);display:flex;align-items:center;}
+    .nav-inner{width:100%;max-width:1200px;margin-inline:auto;padding-inline:1.5rem;display:flex;align-items:center;gap:1rem;}
+    .nav-menu{list-style:none;display:flex;align-items:center;gap:.1rem;margin-inline:auto;}
+    .nav-item{position:relative;}
+    .nav-link{display:flex;align-items:center;gap:.3rem;color:rgba(255,255,255,.92);padding:.55rem .85rem;border-radius:6px;font-size:1rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;transition:background .2s,color .2s;cursor:pointer;background:none;border:none;font-family:inherit;}
+    .nav-link:hover,.nav-link:focus-visible,.nav-item:hover>.nav-link{background:rgba(255,255,255,.15);color:#fff;}
+    .nav-link.active{background:rgba(255,255,255,.22);color:#fff;}
+    .nav-link svg{flex-shrink:0;transition:transform .2s;}
+    .nav-item:hover>.nav-link svg{transform:rotate(180deg);}
+    .dropdown{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:220px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);list-style:none;overflow:hidden;z-index:200;}
+    .nav-item:hover .dropdown,.nav-item:focus-within .dropdown{display:block;}
+    .dropdown a{display:block;padding:.65rem 1.1rem;font-size:1rem;font-weight:500;color:var(--text);transition:background .15s;}
+    .dropdown a:hover,.dropdown a:focus-visible{background:#e8f0fb;color:var(--navy);}
+    .dropdown-divider{height:1px;background:var(--border);}
+    .hamburger{display:none;margin-left:auto;background:none;border:2px solid rgba(255,255,255,.6);border-radius:6px;color:#fff;padding:.4rem .55rem;cursor:pointer;font-size:1.3rem;line-height:1;}
+    @media(max-width:899px){
+      .nav-menu{display:none;flex-direction:column;align-items:stretch;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--navy-d);padding:1rem 0;gap:0;box-shadow:0 6px 20px rgba(0,0,0,.3);}
+      .nav-menu.open{display:flex;}
+      .nav-link{border-radius:0;font-size:1rem;padding:.75rem 1.5rem;}
+      .dropdown{position:static;box-shadow:none;border:none;border-radius:0;background:rgba(0,0,0,.2);}
+      .dropdown a{color:rgba(255,255,255,.85);padding-left:2.5rem;}
+      .dropdown a:hover{background:rgba(255,255,255,.1);color:#fff;}
+      .nav-item:hover .dropdown{display:none;}
+      .nav-item.open .dropdown{display:block;}
+      .hamburger{display:flex;align-items:center;}
+    }
+    /* Page hero banner */
+    .page-hero{background:linear-gradient(135deg,var(--navy) 0%,#2563a8 100%);color:#fff;padding:3.5rem 1.5rem 3rem;text-align:center;}
+    .page-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:.5rem;}
+    .page-hero p{font-size:1.05rem;color:rgba(255,255,255,.9);max-width:620px;margin-inline:auto;}
+    /* Main content */
+    .page-body{max-width:1100px;margin-inline:auto;padding:3rem 1.5rem 4rem;}
+    .content-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 2.25rem;box-shadow:var(--shadow);margin-bottom:2rem;}
+    .content-card h2{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:3px solid var(--gold);}
+    .content-card h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin:1.25rem 0 .5rem;}
+    .content-card p{font-size:1rem;color:var(--muted);margin-bottom:.75rem;line-height:1.7;}
+    .content-card ul{padding-left:1.4rem;color:var(--muted);font-size:1rem;display:flex;flex-direction:column;gap:.4rem;margin-bottom:.75rem;}
+    .content-card li{line-height:1.6;}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:1rem;}
+    .info-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;}
+    .info-box h3{font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin-bottom:.5rem;}
+    .info-box p{font-size:1rem;color:var(--muted);line-height:1.6;}
+    .img-block{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:1.5rem;}
+    .img-block img{width:100%;height:auto;display:block;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+    @media(max-width:700px){.two-col{grid-template-columns:1fr;}}
+    .alert{background:#e8f0fb;border-left:4px solid var(--navy);border-radius:0 var(--radius) var(--radius) 0;padding:1rem 1.25rem;font-size:1rem;color:var(--text);margin-bottom:1.5rem;}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;border-radius:8px;font-size:1rem;font-weight:700;transition:.2s;cursor:pointer;border:none;font-family:inherit;}
+    .btn-primary{background:var(--navy);color:#fff;}
+    .btn-primary:hover{background:var(--navy-d);}
+    /* Footer */
+    footer{background:#111827;color:#d1d5db;padding:2.5rem 1.5rem 1.5rem;}
+    .footer-inner{max-width:1200px;margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;}
+    .footer-col h3{color:#fff;font-size:1rem;font-weight:700;margin-bottom:.75rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .footer-col ul a{font-size:1rem;color:#d1d5db;transition:color .15s;}
+    .footer-col ul a:hover{color:#fff;text-decoration:underline;}
+    .footer-fb-link{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;color:#d1d5db;min-height:44px;padding:.25rem 0;transition:color .15s;}
+    .footer-fb-link:hover{color:#fff;text-decoration:underline;}
+    .footer-fb-link svg{flex-shrink:0;width:28px;height:28px;}
+    .footer-bottom{max-width:1200px;margin-inline:auto;border-top:1px solid #374151;padding-top:1.25rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;align-items:center;font-size:1rem;color:#9ca3af;}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <div class="logo-bar" role="banner" aria-label="Washita Valley CAC">
+    <a href="index.html" aria-label="Go to home page">
+      <img
+        src="https://static.wixstatic.com/media/bf0d32_f4373b43f45c4ef384f3b734eeb4f77a~mv2.jpg/v1/fill/w_880,h_170,al_c,q_90,enc_avif,quality_auto/WVCAC%202.jpg"
+        alt="Washita Valley Community Action Council — Helping People, Changing Lives"
+        width="440" height="85"
+      />
+    </a>
+  </div>
+  
+  <header role="banner">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-inner">
+        <button class="hamburger" id="hamburger" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">&#9776;</button>
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="index.html">HOME</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="annual-reports.html">ANNUAL REPORTS</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <button class="nav-link " aria-haspopup="true" aria-expanded="false" aria-controls="dd-head-start">
+              HEAD START
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="dropdown" id="dd-head-start" role="list"><li><a href="head-start.html">HEAD START Overview</a></li><li class="dropdown-divider" role="separator"></li><li><a href="head-start-centers.html">Head Start Centers</a></li><li><a href="head-start-ehs-policy-council.html">EHS Policy Council</a></li><li><a href="enrollment-application.html">Enrollment Application</a></li></ul>
+          </li>
+          <li class="nav-item" role="listitem">
+            <button class="nav-link " aria-haspopup="true" aria-expanded="false" aria-controls="dd-services">
+              SERVICES
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="dropdown" id="dd-services" role="list"><li><a href="services.html">SERVICES Overview</a></li><li class="dropdown-divider" role="separator"></li><li><a href="transit.html">Transit</a></li><li><a href="weatherization.html">Weatherization</a></li><li><a href="housing.html">Housing</a></li></ul>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="board-of-directors.html">BOARD</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="agency-forms.html">AGENCY FORMS</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="job-openings.html">CAREERS</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link active" href="staff.html">STAFF</a>
+          </li>
+          <li class="nav-item" role="listitem">
+            <a class="nav-link " href="about-us.html">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="page-hero" aria-label="Page header">
+    <h1>Staff</h1>
+    <p>Meet the dedicated team behind WVCAC programs and services.</p>
+  </section>
+  <main id="main" class="page-body">
+    
+    <script src="https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js" onerror="void(0)"></script>
+    <style>
+      .staff-section{background:#d6d6d6;padding:2.5rem 2rem;border-radius:var(--radius);}
+      .staff-section-title{text-align:center;font-size:1.6rem;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:var(--text);margin-bottom:.5rem;}
+      .staff-divider{width:40px;height:2px;background:var(--text);margin:.5rem auto 2rem;}
+      .staff-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;}
+      @media(max-width:600px){.staff-cols{grid-template-columns:1fr;}}
+      .staff-entry{padding:1rem 0;border-bottom:none;}
+      .staff-entry-name{font-size:1.2rem;font-weight:400;color:var(--text);margin-bottom:.2rem;}
+      .staff-entry-title{font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text);margin-bottom:.25rem;}
+      .staff-entry-email a{font-size:1rem;color:#1a4f8a;text-decoration:underline;}
+      #staff-loading{text-align:center;padding:2rem;color:var(--muted);display:none;}
+      #staff-error{display:none;}
+      #staff-static{display:grid;}
+      #staff-dynamic{display:none;}
+    </style>
+
+    <div class="content-card" style="padding:0;overflow:hidden;">
+      <div class="staff-section">
+        <div class="staff-section-title">Central Office Staff</div>
+        <div class="staff-divider" aria-hidden="true"></div>
+        <div id="staff-loading">Loading staff directory&hellip;</div>
+        <div id="staff-error" class="alert" style="margin:1rem;"></div>
+
+        <!-- STATIC (always shown until sheet connected) -->
+        <div id="staff-static" class="staff-cols">
+          <div class="staff-entry">
+            <div class="staff-entry-name">Liane Howell</div>
+            <div class="staff-entry-title">Executive Director - HS/EHS Director</div>
+            <div class="staff-entry-email"><a href="mailto:lhowell@washitavalleycac.com">lhowell@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Challena Franks</div>
+            <div class="staff-entry-title">Associate Director</div>
+            <div class="staff-entry-email"><a href="mailto:adm@washitavalleycac.com">adm@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Brandie Samaniego</div>
+            <div class="staff-entry-title">Human Resources Director</div>
+            <div class="staff-entry-email"><a href="mailto:hr@washitavalleycac.com">hr@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Karleen Spenser</div>
+            <div class="staff-entry-title">HS/EHS Financial Assistant</div>
+            <div class="staff-entry-email"><a href="mailto:finance@washitavalleycac.com">finance@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Lisa Dover</div>
+            <div class="staff-entry-title">Payroll Clerk/ Executive Assistant</div>
+            <div class="staff-entry-email"><a href="mailto:payrollclerk@washitavalleycac.com">payrollclerk@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Dillon Duke</div>
+            <div class="staff-entry-title">Housing Director/ Procurement</div>
+            <div class="staff-entry-email"><a href="mailto:home@washitavalleycac.com">home@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Melissa Vallee</div>
+            <div class="staff-entry-title">HS/EHS Education Manager</div>
+            <div class="staff-entry-email"><a href="mailto:education@washitavalleycac.com">education@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Brandy Edghill</div>
+            <div class="staff-entry-title">Health Manager</div>
+            <div class="staff-entry-email"><a href="mailto:health@washitavalleycac.com">health@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Stephanie Dalton</div>
+            <div class="staff-entry-title">HS/EHS Family/ Special Services Manager</div>
+            <div class="staff-entry-email"><a href="mailto:fs@washitavalleycac.com">fs@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Linda Sain</div>
+            <div class="staff-entry-title">HS/EHS Coach</div>
+            <div class="staff-entry-email"><a href="mailto:coach@washitavalleycac.com">coach@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Alisa Kennell</div>
+            <div class="staff-entry-title">HS/EHS ERSEA</div>
+            <div class="staff-entry-email"><a href="mailto:ersea@washitavalleycac.com">ersea@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Abby Bauman</div>
+            <div class="staff-entry-title">Mentor</div>
+            <div class="staff-entry-email"><a href="mailto:mentor@washitavalleycac.com">mentor@washitavalleycac.com</a></div>
+          </div>
+          <div class="staff-entry">
+            <div class="staff-entry-name">Terri Moore</div>
+            <div class="staff-entry-title">Transit Route Supervisor</div>
+            <div class="staff-entry-email"><a href="mailto:tmoore@washitavalleycac.com">tmoore@washitavalleycac.com</a></div>
+          </div>
+        </div>
+
+        <!-- DYNAMIC (replaces static when sheet connected) -->
+        <div id="staff-dynamic" class="staff-cols"></div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>Contact the Office</h2>
+      <div class="info-grid">
+        <div class="info-box"><h3>Phone</h3><p>(405) 224-5831</p></div>
+        <div class="info-box"><h3>Email</h3><p><a href="mailto:info@washitavalleycac.com" style="color:var(--navy);">info@washitavalleycac.com</a></p></div>
+        <div class="info-box"><h3>Address</h3><p>1000 West Minnesota Ave.<br>Chickasha, OK 73018</p></div>
+      </div>
+      <p style="margin-top:1rem;font-size:1rem;">Interested in joining us? <a href="job-openings.html" style="color:var(--navy);font-weight:700;">View current career openings →</a></p>
+    </div>
+
+    <!-- STAFF SETUP CARD -->
+    <div class="content-card" style="border:2px dashed var(--gold);background:#fffbeb;">
+      <h2 style="color:#92400e;">&#9998; Staff Setup — Keep This Directory Up to Date with Google Sheets</h2>
+      <p style="font-size:1rem;color:var(--muted);margin-bottom:.75rem;">
+        Once connected, anyone can update the staff directory just by editing a Google Sheet — no code, no IT required.
+      </p>
+      <div style="overflow-x:auto;margin-bottom:1rem;">
+        <table style="width:100%;border-collapse:collapse;font-size:1rem;border:1px solid var(--border);border-radius:6px;overflow:hidden;">
+          <thead>
+            <tr style="background:var(--navy);color:#fff;">
+              <th style="padding:.5rem .75rem;text-align:left;">A — Name</th>
+              <th style="padding:.5rem .75rem;text-align:left;">B — Title</th>
+              <th style="padding:.5rem .75rem;text-align:left;">C — Email</th>
+              <th style="padding:.5rem .75rem;text-align:left;">D — Phone (optional)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;font-size:1rem;color:var(--muted);">
+              <td style="padding:.45rem .75rem;">Liane Howell</td>
+              <td style="padding:.45rem .75rem;">Executive Director · HS/EHS Director</td>
+              <td style="padding:.45rem .75rem;">lhowell@washitavalleycac.com</td>
+              <td style="padding:.45rem .75rem;">(405) 224-5831</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ol style="padding-left:1.25rem;color:var(--muted);font-size:1rem;line-height:2;margin-bottom:1rem;">
+        <li>Create a Google Sheet with the columns above. Add one row per staff member.</li>
+        <li>Go to <strong>File → Share → Publish to web → Sheet1 → CSV → Publish</strong>.</li>
+        <li>Copy the URL and open <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;">build_pages.py</code>. Find:<br>
+          <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;">const STAFF_CSV_URL = ""</code><br>
+          Paste your URL inside the quotes, then run <code style="background:#f3f4f6;padding:.1rem .4rem;border-radius:4px;">python3 build_pages.py</code>.
+        </li>
+      </ol>
+      <p style="font-size:1rem;color:#92400e;"><strong>After setup:</strong> The staff list on this page updates automatically whenever anyone edits the sheet. The current list above will be replaced by the live sheet data.</p>
+    </div>
+
+    <script>
+    // ── PASTE YOUR PUBLISHED GOOGLE SHEET CSV URL BELOW ──────────────────
+    const STAFF_CSV_URL = "";
+    // ─────────────────────────────────────────────────────────────────────
+
+    (function () {
+      if (!STAFF_CSV_URL) return; // keep static fallback
+
+      const staticGrid  = document.getElementById("staff-static");
+      const dynamicGrid = document.getElementById("staff-dynamic");
+      const loading     = document.getElementById("staff-loading");
+      const error       = document.getElementById("staff-error");
+
+      loading.style.display = "block";
+      staticGrid.style.display = "none";
+
+      fetch(STAFF_CSV_URL)
+        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+        .then(csv => {
+          loading.style.display = "none";
+          const rows = csv.trim().split("\n").slice(1)
+            .map(row => {
+              const cols = []; let cur = "", inQ = false;
+              for (const ch of row) {
+                if (ch === '"') { inQ = !inQ; }
+                else if (ch === "," && !inQ) { cols.push(cur.trim()); cur = ""; }
+                else cur += ch;
+              }
+              cols.push(cur.trim());
+              return cols;
+            })
+            .filter(r => r[0]);
+
+          if (!rows.length) { staticGrid.style.display = "grid"; return; }
+
+          rows.forEach(r => {
+            const name  = r[0] || "";
+            const title = r[1] || "";
+            const email = r[2] || "";
+            const phone = r[3] || "";
+            const card  = document.createElement("div");
+            card.className = "staff-card";
+            card.innerHTML = \`
+              \${title ? \`<span class="staff-title">\${title}</span>\` : ""}
+              <div class="staff-name">\${name}</div>
+              \${email ? \`<div class="staff-email"><a href="mailto:\${email}">\${email}</a></div>\` : ""}
+              \${phone ? \`<div class="staff-email">\${phone}</div>\` : ""}\`;
+            dynamicGrid.appendChild(card);
+          });
+          dynamicGrid.style.display = "grid";
+        })
+        .catch(() => {
+          loading.style.display = "none";
+          staticGrid.style.display = "grid"; // fall back to static
+          error.style.display = "block";
+          error.textContent = "Could not load live staff directory. Showing cached data.";
+        });
+    })();
+    </script>
+  </main>
+  
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>Programs</h3>
+        <ul>
+          <li><a href="head-start.html">Head Start</a></li>
+          <li><a href="transit.html">Transit</a></li>
+          <li><a href="weatherization.html">Weatherization</a></li>
+          <li><a href="housing.html">Housing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Organization</h3>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="board-of-directors.html">Board of Directors</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="job-openings.html">Job Openings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="agency-forms.html">Agency Forms</a></li>
+          <li><a href="annual-reports.html">Annual Reports</a></li>
+          <li><a href="mailto:info@washitavalleycac.com">Contact Us</a></li>
+          <li>
+            <a class="footer-fb-link" href="https://www.facebook.com/search/top?q=washita%20valley%20community%20action%20council" target="_blank" rel="noopener" aria-label="Visit Washita Valley CAC on Facebook (opens in new tab)">
+              <svg viewBox="0 0 24 24" fill="#1877f2" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Washita Valley Community Action Council. All rights reserved.</span>
+      <span>WCAG 2.1 AA Compliant</span>
+    </div>
+  </footer>
+  <script src="accessibility.js"></script>
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const navMenu=document.getElementById('nav-menu');
+    hamburger.addEventListener('click',()=>{const o=navMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',o);});
+    document.querySelectorAll('.nav-link[aria-haspopup]').forEach(btn=>{
+      btn.addEventListener('click',()=>{if(window.innerWidth<900){const li=btn.closest('.nav-item');li.classList.toggle('open');btn.setAttribute('aria-expanded',li.classList.contains('open'));}});
+    });
+</script>
+</body>
+</html>
